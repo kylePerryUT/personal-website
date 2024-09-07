@@ -9,13 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'perry-family': 'url("../assets/PerryFamilyBG.jpg")',
+        "perry-family": 'url("../assets/PerryFamilyBG.jpg")',
       },
       backgroundColor: {
-        'primary': '#375966',
+        primary: "#375966",
       },
       fontFamily: {
-        'permanent-marker': ['var(--font-permanent-marker)'],
+        "permanent-marker": ["var(--font-permanent-marker)"],
+        "roboto-condensed": ["var(--font-roboto-condensed)"],
+      },
+      colors: {
+        "primary-brown": "#916536",
+        "secondary-brown": "#CB8D4B",
       },
     },
   },
