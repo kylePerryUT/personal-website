@@ -8,7 +8,7 @@ const HeaderNav: FC = () => {
   };
 
   return (
-    <div className="relative flex text-xl text-white justify-between font-permanent-marker">
+    <div className="flex text-xl justify-between">
       <div className={"p-8 text-3xl"}>KP</div>
       <div className={"flex gap-8 p-4"}>
         <button
