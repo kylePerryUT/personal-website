@@ -1,13 +1,11 @@
-import HeaderNav from "@/components/headerNav";
 import { FC } from "react";
 
 const Resume: FC = () => {
   return (
-    <div className="flex flex-col">
-      <HeaderNav />
+    <div id="resume" className="flex flex-col">
       <iframe
         className="h-screen w-screen"
-        src="/KylePerryResume.pdf#view=fitW"
+        src="src/assets/KylePerryResume.pdf#view=fitW"
       />
     </div>
   );

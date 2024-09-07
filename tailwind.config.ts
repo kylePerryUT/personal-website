@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'perry-family': 'url("../assets/PerryFamilyBG.jpg")',
+      },
+      backgroundColor: {
+        'primary': '#375966',
+      },
+      fontFamily: {
+        'permanent-marker': ['var(--font-permanent-marker)'],
       },
     },
   },

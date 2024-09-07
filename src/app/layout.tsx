@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Permanent_Marker } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const permanentMarker = Permanent_Marker({ weight: "400", subsets: ["latin"], variable: "--font-permanent-marker", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Kyle Perry",
@@ -17,8 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="bg-white">{children}</div>
+      <body className={`${permanentMarker.variable} font-permanent-marker bg-primary`}>
+       {children}
       </body>
     </html>
   );
