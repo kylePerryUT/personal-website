@@ -19,7 +19,7 @@ const Home: FC = () => {
           <div className="flex flex-col items-center text-center">
             <div className={"flex text-7xl py-10"}>Hello Im Kyle</div>
             <div className={`flex w-2/3 text-xl font-roboto-condensed pb-4`}>
-              Im a passionate software developer energized by the thrill of
+              I&#39m a passionate software developer energized by the thrill of
               creating innovative solutions. The dynamic nature of this industry
               excites me. Im driven by a relentless curiosity to learn and grow.
             </div>
