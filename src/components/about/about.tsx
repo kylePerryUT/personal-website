@@ -1,11 +1,9 @@
 import { FC } from "react";
-import Image from "next/image";
 
 const About: FC = () => {
   return (
     <div id="about" className="flex h-screen w-screen">
       <div className="flex flex-1 h-full bg-kyle-headshot bg-cover flex-col justify-end relative px-[48px] pb-[112px]">
-        {/* <div className="h-full w-full bg-kyle-headshot bg-cover" /> */}
         <div className="flex flex-col">
           <div className={"flex bg-primary-brown h-4 w-full"} />
           <div className={"flex bg-secondary-brown h-2 w-full"} />
