@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "perry-family": 'url("../assets/PerryFamilyBG.jpg")',
+        "perry-family": 'url("/assets/PerryFamilyBG.jpg")',
+        "kyle-headshot": 'url("/assets/KylePerryHeadshot.png")',
       },
       backgroundColor: {
         primary: "#375966",

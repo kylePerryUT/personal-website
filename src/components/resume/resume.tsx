@@ -5,7 +5,7 @@ const Resume: FC = () => {
     <div id="resume" className="flex flex-col">
       <iframe
         className="h-screen w-screen"
-        src="src/assets/KylePerryResume.pdf#view=fitW"
+        src={"/assets/KylePerryResume.pdf"}
       />
     </div>
   );
