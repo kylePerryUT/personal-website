@@ -17,11 +17,11 @@ const Home: FC = () => {
         <div className="flex flex-col">
           <Header />
           <div className="flex flex-col items-center text-center">
-            <div className={"flex text-7xl py-10"}>Hello I'm Kyle</div>
+            <div className={"flex text-7xl py-10"}>Hello I&#39m Kyle</div>
             <div className={`flex w-2/3 text-xl font-roboto-condensed pb-4`}>
-              Im a passionate software developer energized by the thrill of
+              I&#39m a passionate software developer energized by the thrill of
               creating innovative solutions. The dynamic nature of this industry
-              excites me. I’m driven by a relentless curiosity to learn and
+              excites me. I&#39m driven by a relentless curiosity to learn and
               grow.
             </div>
             <div className={"flex w-2/3 text-3xl"}>
