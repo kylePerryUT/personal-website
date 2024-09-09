@@ -30,7 +30,7 @@ const Home: FC = () => {
             </div>
           </div>
         </div>
-        <div id="color-bars-home" className={"flex flex-col"}>
+        <div className={"flex flex-col"}>
           <div className={"bg-primary-brown h-4"} />
           <div className={"bg-secondary-brown h-2"} />
         </div>
