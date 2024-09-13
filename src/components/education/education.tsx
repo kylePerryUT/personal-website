@@ -5,7 +5,7 @@ const Education: FC = () => {
   const education = [
     {
       course: "Go - The Complete Guide",
-      institution: "Maximilian Schwarzmuller - Udemy",
+      institution: "Maximilian Schwarzmuller - Udemy 2024",
     },
     {
       course: "BS Computer Science",
