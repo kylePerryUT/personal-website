@@ -9,7 +9,7 @@ const About: FC = () => {
           <div className={"flex bg-secondary-brown h-2"} />
         </div>
       </div>
-      <div className="flex flex-1 flex-col justify-center px-[48px]">
+      <div className="flex flex-1 flex-col justify-center px-[48px] text-white">
         <div className="text-center text-6xl pb-[32px]">Me in a Nutshell</div>
         <div className="text-center text-2xl font-roboto-condensed whitespace-pre-line">
           I’m a software engineer with three years of experience and a degree in
