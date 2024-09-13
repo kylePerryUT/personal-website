@@ -6,7 +6,7 @@ const Resume: FC = () => {
       id="resume"
       className="flex flex-col relative items-center gap-y-[80px] px-[64px]"
     >
-      <div className="relative flex text-4xl text-white text-center">
+      <div className="relative flex text-6xl text-white text-center">
         RESUME
       </div>
       <div className="bg-secondary-brown py-[48px] px-[36px]">
