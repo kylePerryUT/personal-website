@@ -6,7 +6,7 @@ const Home: FC = () => {
     <div
       id="home"
       className={
-        "bg-perry-family h-screen w-screen bg-center bg-cover relative opacity-50"
+        "bg-perry-family h-screen w-screen bg-center bg-cover relative"
       }
     >
       <div

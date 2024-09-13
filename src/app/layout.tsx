@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Permanent_Marker, Roboto_Condensed } from "next/font/google";
+import {
+  Permanent_Marker,
+  Roboto_Condensed,
+  Bungee_Inline,
+} from "next/font/google";
 import "./globals.css";
 
 const permanentMarker = Permanent_Marker({
@@ -16,6 +20,13 @@ const robotoCondensed = Roboto_Condensed({
   display: "swap",
 });
 
+const bungeeInline = Bungee_Inline({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bungee-inline",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Kyle Perry",
   description: "A website about me.",
@@ -29,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${permanentMarker.variable} ${robotoCondensed.variable} font-permanent-marker bg-primary`}
+        className={`${permanentMarker.variable} ${robotoCondensed.variable} ${bungeeInline.variable} font-permanent-marker bg-primary`}
       >
         {children}
       </body>
