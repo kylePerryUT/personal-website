@@ -2,6 +2,28 @@ import { FC } from "react";
 
 const Contact: FC = () => {
   // Implement your component logic here
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    try {
+      const response = await fetch("/api/email", {
+        method: "post",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        console.log("falling over");
+        throw new Error(`response status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      console.log(responseData["message"]);
+
+      alert("Message successfully sent");
+    } catch (err) {
+      console.error(err);
+      alert("Error, please try resubmitting the form");
+    }
+  }
 
   return (
     <div
@@ -27,7 +49,10 @@ const Contact: FC = () => {
         </a>
       </div>
       <div className="text-4xl">DROP ME A LINE</div>
-      <form className="flex flex-col w-full gap-y-[32px] font-roboto-condensed text-white">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col w-full gap-y-[32px] font-roboto-condensed text-white"
+      >
         <input className="p-[16px] text-black" type="text" placeholder="Name" />
         <input
           className="p-[16px] text-black"
