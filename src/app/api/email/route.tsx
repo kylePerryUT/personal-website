@@ -35,15 +35,16 @@ export async function POST(request: NextRequest) {
   const transporter = nodemailer.createTransport({
     host: "smtp-mail.outlook.com",
     port: 587,
-    tls: {
-      ciphers: "SSLv3",
-      rejectUnauthorized: false,
-    },
-
+    secure: false,
     auth: {
       user: username,
       pass: password,
     },
+    tls: {
+      rejectUnauthorized: false,
+    },
+    logger: true, // Enable logging
+    debug: true, // Show debug output
   });
 
   try {
