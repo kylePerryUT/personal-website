@@ -5,7 +5,13 @@ const Contact: FC = () => {
   // Implement your component logic here
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    // Iterate over formData entries to log them
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+
     try {
       const response = await fetch("/api/email", {
         method: "post",
@@ -18,6 +24,8 @@ const Contact: FC = () => {
       }
       const responseData = await response.json();
       console.log(responseData["message"]);
+
+      form.reset();
 
       alert("Message successfully sent");
     } catch (err) {
@@ -54,22 +62,33 @@ const Contact: FC = () => {
         onSubmit={handleSubmit}
         className="flex flex-col w-full gap-y-[32px] font-roboto-condensed text-white"
       >
-        <input className="p-[16px] text-black" type="text" placeholder="Name" />
+        <input
+          className="p-[16px] text-black"
+          type="text"
+          placeholder="Name"
+          name="name"
+        />
         <input
           className="p-[16px] text-black"
           type="email"
           placeholder="Email"
+          name="email"
         />
         <input
           className="p-[16px] text-black"
           type="text"
           placeholder="Subject"
+          name="subject"
         />
         <textarea
           className="p-[16px] text-black"
           placeholder="Message"
-        ></textarea>
-        <button className="p-[16px] w-1/4 self-end border-2 border-current text-white">
+          name="message"
+        />
+        <button
+          type="submit"
+          className="p-[16px] w-1/4 self-end border-2 border-current text-white"
+        >
           SEND
         </button>
       </form>

@@ -1,14 +1,11 @@
 import { NextResponse, NextRequest } from "next/server";
 const nodemailer = require("nodemailer");
 
-// Handles POST requests to /api
-
 export async function POST(request: NextRequest) {
   const username = process.env.SMTP_USERNAME;
   const password = process.env.SMTP_PASSWORD;
   const myEmail = process.env.EMAIL_ADDRESS;
 
-  console.log("dealing with request");
   const formData = await request.formData();
   const name = formData.get("name");
   const email = formData.get("email");
@@ -33,12 +30,12 @@ export async function POST(request: NextRequest) {
     const mail = await transporter.sendMail({
       from: username,
       to: myEmail,
-      replyTo: email,
-      subject: subject,
+      subject: "Message from your website",
       html: `
             <h2>This message was sent through your websites contact form</h1>
             <p>Name: ${name} </p>
             <p>Email: ${email} </p>
+            <p>Subject: ${subject} </p>
             <p>Message: ${message} </p>
             `,
     });
