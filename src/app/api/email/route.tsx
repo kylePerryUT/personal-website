@@ -8,8 +8,14 @@ export async function POST(request: NextRequest) {
 
   if (
     username === undefined ||
+    username === "" ||
+    username === null ||
     password === undefined ||
-    myEmail === undefined
+    password === "" ||
+    password === null ||
+    myEmail === undefined ||
+    myEmail === "" ||
+    myEmail === null
   ) {
     return NextResponse.json(
       {
