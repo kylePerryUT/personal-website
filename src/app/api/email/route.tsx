@@ -6,6 +6,10 @@ export async function POST(request: NextRequest) {
   const password = process.env.SMTP_PASSWORD;
   const myEmail = process.env.EMAIL_ADDRESS;
 
+  console.log("userName: ", username);
+  console.log("password: ", password);
+  console.log("myEmail: ", myEmail);
+
   if (
     username === undefined ||
     username === "" ||
