@@ -47,6 +47,15 @@ export async function POST(request: NextRequest) {
     debug: true, // Show debug output
   });
 
+  // verify connection configuration
+  transporter.verify(function (error: any, success: any) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Server is ready to take our messages");
+    }
+  });
+
   try {
     const mail = await transporter.sendMail({
       from: username,
