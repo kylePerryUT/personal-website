@@ -6,30 +6,6 @@ export async function POST(request: NextRequest) {
   const password = process.env.SMTP_PASSWORD;
   const myEmail = process.env.EMAIL_ADDRESS;
 
-  console.log("userName: ", username);
-  console.log("password: ", password);
-  console.log("myEmail: ", myEmail);
-
-  if (
-    username === undefined ||
-    username === "" ||
-    username === null ||
-    password === undefined ||
-    password === "" ||
-    password === null ||
-    myEmail === undefined ||
-    myEmail === "" ||
-    myEmail === null
-  ) {
-    return NextResponse.json(
-      {
-        error: "Internal Server Error",
-        message: "COULD NOT READ ENV VARIABLES",
-      },
-      { status: 500 }
-    );
-  }
-
   const formData = await request.formData();
   const name = formData.get("name");
   const email = formData.get("email");

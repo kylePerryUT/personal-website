@@ -1,9 +1,12 @@
 "use client";
-import { FC } from "react";
+import { FC, useState } from "react";
+import Spinner from "../loading-spinner/spinner";
 
 const Contact: FC = () => {
+  const [emailSending, setEmailSending] = useState(false);
   // Implement your component logic here
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    setEmailSending(true);
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -28,9 +31,11 @@ const Contact: FC = () => {
       form.reset();
 
       alert("Message successfully sent");
+      setEmailSending(false);
     } catch (err) {
       console.error(err);
       alert("Error, please try resubmitting the form");
+      setEmailSending(false);
     }
   }
 
@@ -67,29 +72,34 @@ const Contact: FC = () => {
           type="text"
           placeholder="Name"
           name="name"
+          required
         />
         <input
           className="p-[16px] text-black"
           type="email"
           placeholder="Email"
           name="email"
+          required
         />
         <input
           className="p-[16px] text-black"
           type="text"
           placeholder="Subject"
           name="subject"
+          required
         />
         <textarea
           className="p-[16px] text-black"
           placeholder="Message"
           name="message"
+          required
         />
         <button
+          disabled={emailSending}
           type="submit"
-          className="p-[16px] w-1/4 self-end border-2 border-current text-white"
+          className="flex flex-row justify-center p-[16px] w-1/4 self-end border-2 border-current text-white"
         >
-          SEND
+          {emailSending ? <Spinner /> : "SEND"}
         </button>
       </form>
     </div>

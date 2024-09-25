@@ -6,14 +6,14 @@ const Projects: FC = () => {
     {
       title: "Personal Website",
       description:
-        "Built this website using Next.js, Tailwind CSS, and Vercel. I wanted to create a personal website to showcase my projects and skills.",
+        "Built this website using Next.js, Tailwind CSS, and Vercel. I wanted to create a personal website to showcase my projects and skills and start learning Next.js and Tailwind.",
       skills: ["Next.js", "Tailwind CSS", "Vercel"],
       links: ["https://github.com/kylePerryUT/personal-website"],
     },
     {
       title: "Blog Site",
       description:
-        "Built a personal blog site as a side project. Used Context instead of Redux to expand my knowledge of different options for managing state. Implemented hooks to wrap api calls and handle the necessary auth headers adding the JWT token as needed.",
+        "Built the front end of a personal blog site as a side project. Used Context instead of Redux to expand my knowledge of different options for managing state. Implemented hooks to wrap api calls and handle the necessary auth headers adding the JWT token as needed.",
       skills: ["React", "JavaScript", "TypeScript"],
       links: ["https://github.com/kylePerryUT/best-blogging-site-ever"],
     },

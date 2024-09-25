@@ -15,9 +15,9 @@ const About: FC = () => {
           I’m a software engineer with three years of experience and a degree in
           computer science. I have strong skills in HTML, CSS, JavaScript,
           TypeScript, and React, and I enjoy creating easy-to-use, beautiful
-          websites. I’ve also worked with Angular, C#, .NET, SQL Server, Go, and
-          MongoDB, which has given me a broader understanding of both front-end
-          and back-end development.
+          websites. I’ve also worked with Angular, C#, .NET, SQL Server, Node,
+          Go, and MongoDB, which has given me a broader understanding of both
+          front-end and back-end development.
           <br />
           <br />
           I’m a great communicator and work well with different teams, ensuring
