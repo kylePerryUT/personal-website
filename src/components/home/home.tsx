@@ -17,14 +17,21 @@ const Home: FC = () => {
         <div className="flex flex-col">
           <Header />
           <div className="flex flex-col items-center text-center">
-            <div className={"flex text-7xl py-10"}>Hello Im Kyle</div>
-            <div className={`flex w-2/3 text-xl font-roboto-condensed pb-4`}>
-              Im a passionate software developer energized by the thrill of
-              creating innovative solutions. The dynamic nature of this industry
-              excites me. Im driven by a relentless curiosity to learn and grow.
+            <div className={"flex text-7xl pt-8 pb-20"}>Hello Im Kyle</div>
+            <div className={`flex w-2/3 text-xl font-roboto-condensed pb-16`}>
+              I'm a creative problem solver and excellent communicator with a
+              passion for developing beautiful, user-friendly interfaces. I
+              thrive on tackling complicated challenges and am always open to
+              constructive criticism and feedback. Whether it's through HTML,
+              CSS, JavaScript, or various front-end frameworks, I love creating
+              innovative solutions that wow the customer. Currently, I am
+              working to expand my skillset not only with front-end languages
+              and technologies but also with the back-end. I enjoy the
+              challenges, complexity, and different problems that I can work on
+              when working across the stack.
             </div>
             <div className={"flex w-2/3 text-3xl"}>
-              Being a software developer is more than a career, its a journey I
+              Being a software engineer is more than a career, its a journey I
               embrace with enthusiasm every day.
             </div>
           </div>
