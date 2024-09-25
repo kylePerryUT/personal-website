@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from "next/image";
 
 const Resume: FC = () => {
   return (
@@ -11,7 +12,11 @@ const Resume: FC = () => {
       </div>
       <div className="bg-secondary-brown py-[48px] px-[36px]">
         <a target="_blank" href="/resume">
-          <img className="relative flex" src={"/assets/KylePerryResume.jpg"} />
+          <Image
+            className="relative flex"
+            src="/assets/KylePerryResume.jpg"
+            alt="Resume"
+          />
         </a>
       </div>
     </div>

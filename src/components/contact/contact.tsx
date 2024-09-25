@@ -1,6 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import Spinner from "../loading-spinner/spinner";
+import Image from "next/image";
 
 const Contact: FC = () => {
   const [emailSending, setEmailSending] = useState(false);
@@ -52,14 +53,14 @@ const Contact: FC = () => {
           className="w-1/2 flex justify-center items-center box-border"
           href="https://www.linkedin.com/in/kyleperryut/"
         >
-          <img src="/assets/linkedin.png" />
+          <Image src="/assets/linkedin.png" alt="linked in logo" />
         </a>
         <a
           target="_blank"
           className="w-1/2 flex justify-center items-center box-border"
           href="https://github.com/kylePerryUT"
         >
-          <img src="/assets/github.png" />
+          <Image src="/assets/github.png" alt="github logo" />
         </a>
       </div>
       <div className="text-4xl">DROP ME A LINE</div>

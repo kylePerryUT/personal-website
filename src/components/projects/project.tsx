@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export interface Project {
   title: string;
@@ -25,13 +26,12 @@ const Project: React.FC<ProjectProps> = (props) => {
         />
       );
     }
+
     if (props.project.image) {
       return (
-        <img
-          className="rounded-md"
-          src={props.project.image}
-          alt={props.project.title}
-        />
+        <div className="rounded-md">
+          <Image src={props.project.image} alt={props.project.title} />
+        </div>
       );
     }
   };
